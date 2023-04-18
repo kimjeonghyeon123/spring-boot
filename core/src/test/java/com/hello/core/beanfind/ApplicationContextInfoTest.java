@@ -13,9 +13,10 @@ public class ApplicationContextInfoTest {
     @DisplayName("모든 빈 출력하기")
     void findAllBean() {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
+
         for (String beanDefinitionName : beanDefinitionNames) {
             Object bean = ac.getBean(beanDefinitionName);
-            System.out.println("name = " + beanDefinitionName + "object = " + bean);
+            System.out.println("name = " + beanDefinitionName + " object = " + bean);
 
         }
     }
@@ -29,7 +30,7 @@ public class ApplicationContextInfoTest {
 
             if(beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) { //내가 등록한 빈
                 Object bean = ac.getBean(beanDefinitionName);
-                System.out.println("name = " + beanDefinitionName + "object = " + bean);
+                System.out.println("name = " + beanDefinitionName + " object = " + bean);
 
             }
 
