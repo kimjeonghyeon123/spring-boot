@@ -44,5 +44,5 @@
   1) DI(Dependency Injection), DI 컨테이너
     - 의존관계, 의존성 주입
     - 다형성, OCP, DIP 가능하게 해줌
-
+  2) 2강부터 시작
 
