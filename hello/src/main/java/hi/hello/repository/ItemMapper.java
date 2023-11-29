@@ -1,8 +1,6 @@
-package hello.itemservice.repository.mybatis;
+package hi.hello.repository;
 
-import hello.itemservice.domain.Item;
-import hello.itemservice.repository.ItemSearchCond;
-import hello.itemservice.repository.ItemUpdateDto;
+import hi.hello.domain.Item;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -19,4 +17,6 @@ public interface ItemMapper {
     Optional<Item> findById(Long id);
 
     List<Item> findAll(ItemSearchCond itemSearch);
+
+    void deleteAll();
 }

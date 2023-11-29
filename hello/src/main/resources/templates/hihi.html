@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <form method="post" th:action>
+        <input name="sentence" id="sentence" type="text">
+        <button id="sentenceBtn" type="submit">제출</button>
+    </form>
+
+<!--    <script>-->
+<!--        $(document).ready(function(){-->
+<!--            $('#sentenceBtn').on('click', function(){-->
+<!--                let sentence = $('#sentence').val();-->
+<!--                $.ajax({-->
+<!--                    type: 'post',-->
+<!--                    url: 'http://6073-34-173-231-220.ngrok.io/model',-->
+<!--                    headers: { "content-type" : "application/json" },-->
+<!--                    data: JSON.stringify({ sentence: sentence }),-->
+<!--                    success: function(data) {-->
+<!--                        alert(data.result);-->
+<!--                    },-->
+<!--                    error: function(error) {-->
+<!--                        alert('실패!!');-->
+<!--                    }-->
+<!--                })-->
+<!--            })-->
+<!--        })-->
+<!--    </script>-->
+</body>
+</html>
