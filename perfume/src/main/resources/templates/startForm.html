@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>startform</title>
+    <style>
+        body {
+            background-image: url('[[@{/image/background/main.jpg}]]');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            width: 350px;
+            height: 900px;
+            background-color: #FFD8D8;
+            border: 3px solid skyblue;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 30%;
+            height: 30px;
+            margin-top: 10px;
+            margin-right: 15px;
+            align-self: flex-end;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            background-color: skyblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3ec5f1;
+        }
+    </style>
+</head>
+<body>
+<form th:action="@{/perfume}">
+    <img th:src="@{/image/perfume/1.jpg}">
+    <br/>
+    <div>
+        <label>
+            <input type="radio" name="rating1" value="1"> 1점
+        </label>
+        <label>
+            <input type="radio" name="rating1" value="2" checked> 2점
+        </label>
+        <label>
+            <input type="radio" name="rating1" value="3"> 3점
+        </label>
+    </div>
+
+    <img th:src="@{/image/perfume/2.jpg}">
+    <br/>
+    <div>
+        <label>
+            <input type="radio" name="rating2" value="1"> 1점
+        </label>
+        <label>
+            <input type="radio" name="rating2" value="2" checked> 2점
+        </label>
+        <label>
+            <input type="radio" name="rating2" value="3"> 3점
+        </label>
+    </div>
+
+    <img th:src="@{/image/perfume/3.jpg}">
+    <br/>
+    <div>
+        <label>
+            <input type="radio" name="rating3" value="1"> 1점
+        </label>
+        <label>
+            <input type="radio" name="rating3" value="2" checked> 2점
+        </label>
+        <label>
+            <input type="radio" name="rating3" value="3"> 3점
+        </label>
+    </div>
+
+    <button type="submit">추천받기</button>
+</form>
+</body>
+</html>
